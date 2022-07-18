@@ -19,7 +19,7 @@ export const metadata = {
   url: "https://slack.com/",
   variant: "conferencing",
   verified: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
 } as App;
 
 export default metadata;

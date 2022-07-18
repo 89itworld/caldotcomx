@@ -20,7 +20,7 @@ export const metadata = {
   url: "https://cal.com/apps/wipe-my-cal",
   variant: "other",
   verified: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
 } as App;
 
 export default metadata;

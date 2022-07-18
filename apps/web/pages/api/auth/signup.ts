@@ -51,6 +51,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const hashedPassword = await hashPassword(password);
+  const uplan = "PRO";
 
   const user = await prisma.user.upsert({
     where: { email: userEmail },
@@ -58,13 +59,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       username,
       password: hashedPassword,
       emailVerified: new Date(Date.now()),
-      identityProvider: IdentityProvider.CAL,
+      identityProvider: IdentityProvider.HIBOX,
+      plan: uplan,
+      brandColor: "#8f6cc9",
+      completedOnboarding: true,
     },
     create: {
       username,
       email: userEmail,
       password: hashedPassword,
-      identityProvider: IdentityProvider.CAL,
+      identityProvider: IdentityProvider.HIBOX,
+      plan: uplan,
+      brandColor: "#8f6cc9",
+      completedOnboarding: true,
     },
   });
 

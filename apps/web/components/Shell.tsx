@@ -31,8 +31,8 @@ import Dropdown, {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@calcom/ui/Dropdown";
-import LicenseBanner from "@ee/components/LicenseBanner";
-import TrialBanner from "@ee/components/TrialBanner";
+//import LicenseBanner from "@ee/components/LicenseBanner";
+//import TrialBanner from "@ee/components/TrialBanner";
 import HelpMenuItem from "@ee/components/support/HelpMenuItem";
 
 import ErrorBoundary from "@lib/ErrorBoundary";
@@ -161,13 +161,13 @@ const Layout = ({
           current: router.asPath.startsWith("/apps/routing_forms/"),
         }
       : null,
-    {
+    /*  {
       name: t("workflows"),
       href: "/workflows",
       icon: LightningBoltIcon,
       current: router.asPath.startsWith("/workflows"),
       pro: true,
-    },
+    }, */
     {
       name: t("apps"),
       href: "/apps",
@@ -288,7 +288,7 @@ const Layout = ({
                     </span>
                   </nav>
                 </div>
-                <TrialBanner />
+
                 <div
                   className="rounded-sm pt-2 pb-2 pl-3 pr-2 hover:bg-gray-100 lg:mx-2 lg:pl-2"
                   data-testid="user-dropdown-trigger">
@@ -432,7 +432,6 @@ const Layout = ({
               {/* add padding to content for mobile navigation*/}
               <div className="block pt-12 md:hidden" />
             </div>
-            <LicenseBanner />
           </main>
         </div>
       </div>

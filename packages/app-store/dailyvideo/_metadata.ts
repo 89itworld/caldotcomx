@@ -21,7 +21,7 @@ export const metadata = {
   slug: "daily-video",
   title: "Cal Video",
   isGlobal: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
   locationType: LocationType.Daily,
   locationLabel: "Cal Video",
   key: { apikey: process.env.DAILY_API_KEY },

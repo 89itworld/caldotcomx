@@ -447,7 +447,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
                   <ColorPicker defaultValue={user.darkBrandColor} onChange={setDarkBrandColor} />
                 </div>
               </div>
-              <div>
+              {/*               <div>
                 <div className="relative flex items-start">
                   <div className="flex h-5 items-center">
                     <HideBrandingInput user={user} hideBrandingRef={hideBrandingRef} />
@@ -460,7 +460,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
                     <p className="text-gray-500">{t("disable_cal_branding_description")}</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <h3 className="text-md mt-7 font-bold leading-6 text-red-700">{t("danger_zone")}</h3>
               <div>
                 <div className="relative flex items-start">

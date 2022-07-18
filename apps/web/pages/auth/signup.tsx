@@ -1,4 +1,4 @@
-import { GetServerSidePropsContext } from "next";
+//import { GetServerSidePropsContext } from "next";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
@@ -7,17 +7,17 @@ import { Alert } from "@calcom/ui/Alert";
 import Button from "@calcom/ui/Button";
 import { EmailField, PasswordField, TextField } from "@calcom/ui/form/fields";
 
-import { asStringOrNull } from "@lib/asStringOrNull";
+//import { asStringOrNull } from "@lib/asStringOrNull";
 import { NEXT_PUBLIC_BASE_URL } from "@lib/config/constants";
 import { useLocale } from "@lib/hooks/useLocale";
-import prisma from "@lib/prisma";
-import { isSAMLLoginEnabled } from "@lib/saml";
-import { inferSSRProps } from "@lib/types/inferSSRProps";
 
+//import prisma from "@lib/prisma";
+//import { isSAMLLoginEnabled } from "@lib/saml";
+//import { inferSSRProps } from "@lib/types/inferSSRProps";
 import { HeadSeo } from "@components/seo/head-seo";
 
-import { IS_GOOGLE_LOGIN_ENABLED } from "@server/lib/constants";
-import { ssrInit } from "@server/lib/ssr";
+//import { IS_GOOGLE_LOGIN_ENABLED } from "@server/lib/constants";
+//import { ssrInit } from "@server/lib/ssr";
 
 type Props = inferSSRProps<typeof getServerSideProps>;
 
@@ -32,6 +32,7 @@ type FormValues = {
 export default function Signup({ email }: Props) {
   const { t } = useLocale();
   const router = useRouter();
+  const { query } = useRouter();
   const methods = useForm<FormValues>();
   const {
     register,
@@ -60,8 +61,8 @@ export default function Signup({ email }: Props) {
       .then(handleErrors)
       .then(
         async () =>
-          await signIn("Cal.com", {
-            callbackUrl: (`${NEXT_PUBLIC_BASE_URL}/${router.query.callbackUrl}` || "") as string,
+          await signIn("Hibox.co", {
+            callbackUrl: (`${NEXT_PUBLIC_BASE_URL}` || "") as string,
           })
       )
       .catch((err) => {
@@ -101,6 +102,7 @@ export default function Signup({ email }: Props) {
                 />
                 <EmailField
                   {...register("email")}
+                  defaultValue={query.email}
                   className="mt-1 block w-full rounded-md border border-gray-300 bg-gray-100 px-3 py-2 shadow-sm focus:border-black focus:outline-none focus:ring-black sm:text-sm"
                 />
                 <PasswordField
@@ -130,8 +132,8 @@ export default function Signup({ email }: Props) {
                   color="secondary"
                   className="w-5/12 justify-center"
                   onClick={() =>
-                    signIn("Cal.com", {
-                      callbackUrl: (`${NEXT_PUBLIC_BASE_URL}/${router.query.callbackUrl}` || "") as string,
+                    signIn("hibox.co", {
+                      callbackUrl: (`${NEXT_PUBLIC_BASE_URL}` || "") as string,
                     })
                   }>
                   {t("login_instead")}
@@ -145,6 +147,7 @@ export default function Signup({ email }: Props) {
   );
 }
 
+/*
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   const ssr = await ssrInit(ctx);
   const token = asStringOrNull(ctx.query.token);
@@ -198,4 +201,4 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
       trpcState: ssr.dehydrate(),
     },
   };
-};
+};*/

@@ -21,7 +21,7 @@ export const metadata = {
   title: "Jitsi Meet",
   trending: true,
   isGlobal: false,
-  email: "help@cal.com",
+  email: "help@hibox.com",
   locationType: LocationType.Jitsi,
   locationLabel: "Jitsi Video",
 } as App;

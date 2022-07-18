@@ -24,7 +24,7 @@ export const metadata = {
   docsUrl: "https://stripe.com/docs",
   variant: "payment",
   verified: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
 } as App;
 
 export default metadata;

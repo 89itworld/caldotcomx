@@ -8,6 +8,7 @@ export const metadata = {
   name: "Google Calendar",
   description: _package.description,
   installed: !!(process.env.GOOGLE_API_CREDENTIALS && validJson(process.env.GOOGLE_API_CREDENTIALS)),
+  isGlobal: true,
   type: "google_calendar",
   title: "Google Calendar",
   imageSrc: "/api/app-store/googlecalendar/icon.svg",
@@ -18,10 +19,10 @@ export const metadata = {
   rating: 5,
   reviews: 69,
   slug: "google-calendar",
-  trending: false,
+  trending: true,
   url: "https://cal.com/",
   verified: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
 } as App;
 
 export default metadata;

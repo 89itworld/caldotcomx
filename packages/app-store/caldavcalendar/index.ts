@@ -19,7 +19,7 @@ export const metadata = {
   trending: false,
   url: "https://cal.com/",
   verified: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
 } as App;
 
 export * as api from "./api";

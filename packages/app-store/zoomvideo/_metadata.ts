@@ -5,12 +5,15 @@ import _package from "./package.json";
 
 export const metadata = {
   name: "Zoom Video",
+  trending: true,
+  isGlobal: true,
+  installed: true,
   description: _package.description,
   type: "zoom_video",
   imageSrc: "/api/app-store/zoomvideo/icon.svg",
   variant: "conferencing",
   logo: "/api/app-store/zoomvideo/icon.svg",
-  publisher: "Cal.com",
+  publisher: "HiboxScheduler",
   url: "https://zoom.us/",
   verified: true,
   rating: 4.3, // TODO: placeholder for now, pull this from TrustPilot or G2
@@ -18,8 +21,7 @@ export const metadata = {
   category: "video",
   slug: "zoom",
   title: "Zoom Video",
-  trending: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
   locationType: LocationType.Zoom,
   locationLabel: "Zoom Video",
 } as App;

@@ -22,7 +22,7 @@ export const metadata = {
   url: "https://cal.com/",
   verified: true,
   isGlobal: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
   locationType: LocationType.GoogleMeet,
   locationLabel: "Google Meet",
 } as App;

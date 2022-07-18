@@ -19,7 +19,7 @@ export const metadata = {
   slug: "msteams",
   title: "MS Teams (Requires work/school account)",
   trending: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
   locationType: LocationType.Teams,
   locationLabel: "MS Teams",
 } as App;

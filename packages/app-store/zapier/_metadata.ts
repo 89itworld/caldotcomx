@@ -19,7 +19,7 @@ export const metadata = {
   url: "https://cal.com/apps/zapier",
   variant: "other",
   verified: true,
-  email: "help@cal.com",
+  email: "help@hibox.com",
 } as App;
 
 export default metadata;
